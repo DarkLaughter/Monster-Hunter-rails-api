@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_07_06_221413) do
     t.string "name"
     t.string "image_url"
     t.bigint "meal_id", null: false
+    t.integer "recipe_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["meal_id"], name: "index_dishes_on_meal_id"
@@ -43,16 +44,13 @@ ActiveRecord::Schema.define(version: 2020_07_06_221413) do
   end
 
   create_table "recipes", force: :cascade do |t|
-    t.bigint "dish_id", null: false
     t.text "ingredients"
     t.text "instructions"
     t.string "link_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["dish_id"], name: "index_recipes_on_dish_id"
   end
 
   add_foreign_key "dishes", "meals"
   add_foreign_key "meals", "chefs"
-  add_foreign_key "recipes", "dishes"
 end

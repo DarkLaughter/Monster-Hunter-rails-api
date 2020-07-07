@@ -1,3 +1,4 @@
 class ChefSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :image_url, :video_url, :location
+  has_many :meals
 end
