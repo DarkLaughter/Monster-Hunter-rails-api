@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_07_06_221413) do
   create_table "meals", force: :cascade do |t|
     t.string "name"
     t.string "image_url"
+    t.string "video_url"
     t.bigint "chef_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

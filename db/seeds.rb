@@ -11,10 +11,10 @@ Chef.create(name:"Meowscular Chef" , image_url: "https://thumbs.gfycat.com/Whisp
 Chef.create(name:"Grammeowster Chef" , image_url: "https://pm1.narvii.com/7323/2c4ce61929ab8093f0c7497e2835e081bfff041cr1-1334-750v2_hq.jpg",video_url: "https://youtu.be/AFIXAvOQBMc", location:"Seliana")
 
 puts "creating meals"
-Meal.create(name:"Fat Cat", image_url:"https://cdn.gamer-network.net/2018/usgamer/monster-hunter-world-canteen-eating.png", chef_id: Chef.first.id)
-Meal.create(name:"Cool Cat", image_url:"https://i.ytimg.com/vi/0sALjbK_5jM/maxresdefault.jpg", chef_id: Chef.first.id)
-Meal.create(name:"Felyne Fisher", image_url:"https://assets.rockpapershotgun.com/images/2018/08/20180726122812_1.jpg", chef_id: Chef.first.id)
-Meal.create(name:"Lucky Cat", image_url:"https://static.wikia.nocookie.net/d44a9097-c6c4-4430-bb69-3168c92d0c18", chef_id: Chef.second.id)
+Meal.create(name:"Fat Cat", image_url:"https://cdn.gamer-network.net/2018/usgamer/monster-hunter-world-canteen-eating.png", video_url: "https://www.youtube.com/watch?v=UbRcBEB2dmM",chef_id: Chef.first.id)
+Meal.create(name:"Cool Cat", image_url:"https://i.ytimg.com/vi/0sALjbK_5jM/maxresdefault.jpg", video_url: "https://www.youtube.com/watch?v=KZ27YBtwaP0",chef_id: Chef.first.id)
+Meal.create(name:"Felyne Fisher", image_url:"https://assets.rockpapershotgun.com/images/2018/08/20180726122812_1.jpg", video_url: "https://www.youtube.com/watch?v=8nNHBePVAxc", chef_id: Chef.first.id)
+Meal.create(name:"Lucky Cat", image_url:"https://static.wikia.nocookie.net/d44a9097-c6c4-4430-bb69-3168c92d0c18", video_url:"https://youtu.be/AFIXAvOQBMc" ,chef_id: Chef.second.id)
 
 puts "creating dish"
 Dish.create(name: "TURKEY", image_url: "https://images-gmi-pmc.edge-generalmills.com/efc328a5-f18d-45f6-9b09-dd44023c3ee8.jpg", meal_id: Meal.find_by(name:"Fat Cat").id )
