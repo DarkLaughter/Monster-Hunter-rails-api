@@ -1,3 +1,5 @@
 class DishSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :image_url, :recipes
+  has_many :recipes
+
 end

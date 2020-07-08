@@ -1,8 +1,5 @@
 class MealSerializer < ActiveModel::Serializer
-  attributes :id, :name, :image_url, :chef_id
+  attributes :id, :name, :image_url
+  has_many :dishes
 
-
-  def chef_name
-    object.chef.name
-  end
 end

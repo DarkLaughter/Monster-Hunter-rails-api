@@ -4,9 +4,7 @@ class CreateRecipes < ActiveRecord::Migration[6.0]
       t.belongs_to :dish, null: false, foreign_key: true
       t.text :ingredients
       t.text :instructions
-      t.string :link_url
 
-      t.timestamps
     end
   end
 end
