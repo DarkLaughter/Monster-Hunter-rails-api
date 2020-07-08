@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
     end
     
     def create
-        @recipe = Recipe.create(params.permit(:dish_id, :ingredients, :directions))
+        @recipe = Recipe.create(params.permit(:dish_id, :ingredients, :instructions)
         render json: @recipe
     end
     
